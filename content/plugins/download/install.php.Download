@@ -1,0 +1,37 @@
+<?php
+/*
+	附件管理
+*/
+!defined('EMLOG_ROOT') && exit('access deined!');
+
+function DownloadMe_Install_Check() {
+	$DB = MySql::getInstance();$Msg = "";
+	$Oid = mysql_query("SELECT baby_down FROM ".DB_PREFIX."attachment");
+	if( !empty($Oid) ){
+		$Edit = mysql_query(
+			"ALTER TABLE ".DB_PREFIX."attachment CHANGE baby_down download TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL"
+		);
+		$Query = $DB->query("SELECT * FROM ".DB_PREFIX."attachment ORDER BY aid DESC");
+		$QueryNum = $DB->num_rows($Query);
+		if($QueryNum >= 1 && $Edit === true ) {
+			$OidList = array();
+			while($Row = $DB->fetch_array($Query)) {
+				$Id = $Row['aid'];
+				$OidList[$Id] = $Row['download'];
+			}
+			foreach($OidList as $Key => $Val) {
+				$Data = serialize(array("statis" => $Val, "hide" => false, "web" => false));
+				$DB->query("UPDATE ".DB_PREFIX."attachment SET download='{$Data}' WHERE aid={$Key}");
+			}
+		}
+	}else{
+		$Check = mysql_query("SELECT download FROM ".DB_PREFIX."attachment");
+		if( empty($Check) ){
+			$QueryAdd = $DB->query(
+				"ALTER TABLE  ".DB_PREFIX."attachment ADD download TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL"
+			);
+		}else{
+			return true;
+		}
+	}
+}

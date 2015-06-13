@@ -1,0 +1,77 @@
+@charset "utf-8";
+/* CSS Document */
+
+.DownloadMe{width:auto; height:auto; clear:both; position:relative;}
+.DownloadMe .redMe{color:red;}
+.DownloadMe .error,.DownloadMe .actived{margin:0 20px;}
+.DownloadMe .verMe{background:#FDFFCE url(Plaint.png) 5px 50% no-repeat;}
+.DownloadMe .addUrl{
+	background:#FFF; position:absolute; left:0px; top:0px; width:98%; margin:0;
+	border:none; padding-left:4px; color:#F60; border-radius:0;
+}
+.DownloadMe .addUrl input{font-size:12px; border:none; text-indent:0.5em; border-bottom:1px solid red; margin:0 3px;}
+.DownloadMe .addUrl input.FileMove{width:60px;}
+.DownloadMe .addurl{
+	height:16px; width:16px; overflow:hidden; display:inline-block;
+	background-image:url(nav.gif); background-repeat:no-repeat; margin-left:30px; background-position:0% -150px;
+	position:relative; top:5px;
+}
+.DownloadMe ul,.DownloadMe li{padding:0; margin:0; list-style-type:none;}
+.DownloadMe .Title{padding-left:45px; background:url(File.png) 0 0 no-repeat; height:40px; line-height:40px;}
+.DownloadMe .Title .navMe{display:inline-block; float:right; color:#666;}
+.DownloadMe .Title .navMe a{padding:0 8px; height:20px; line-height:20px; overflow:hidden; display:inline-block;}
+.DownloadMe .Title .navMe .unu{
+	background-image:url(../../../../admin/views/images/no.png); background-position:0% 50%;
+	background-repeat:no-repeat; padding-left:18px;
+}
+.DownloadMe .Title .navMe .out{
+	background-image:url(../../../../admin/views/images/plugin_inactive.gif); background-repeat:no-repeat;
+	background-position:0% 50%; padding-left:18px;
+}
+.DownloadMe .Title .navMe .anImg{
+	background-image:url(nav.gif); background-repeat:no-repeat; padding-left:18px;
+}
+.DownloadMe .Title .navMe .start{background-position:0% -58px;}
+.DownloadMe .Title .navMe .config{background-position:0% -29px;}
+.DownloadMe .Title .navMe .upload{background-position:0% 2px;}
+.DownloadMe .Title .navMe .cache{background-position:0% -118px;}
+.DownloadMe .Title .navMe .strong{font-weight:bold; color:#F90;}
+.DownloadMe .Title .navMe .urlimg{background:url(url.gif) 0 50% no-repeat; padding-left:18px;}
+
+.DownloadMe .List{width:auto; height:auto; padding-top:10px;}
+.DownloadMe .notes{padding:5px; margin:3px auto; border:1px solid #EBEBEB; clear:both; position:relative;}
+.DownloadMe .notes .MsgMe{padding:0 5px;}
+.DownloadMe .List .edit{height:14pt; border:1px solid #FFF; color:#6BB044;}
+.DownloadMe .List .name{padding-left:20px; background:url(line.png) 0 50% no-repeat;}
+.DownloadMe .List .name input{padding-left:3px;}
+.DownloadMe .List td{background-color:#FFF;}
+.DownloadMe .List .BlogTitle td{height:25px; line-height:25px; background:url(../../../../admin/views/images/admindex_itembg.gif);}
+.DownloadMe .List .BlogTitle .check{border-top:1px dotted #BBB;}
+.DownloadMe .List .BlogUrl{
+	color:#000; text-decoration:underline; padding-left:5px; padding-right:18px;
+	background:url(title.png) 100% 0% no-repeat;
+}
+.DownloadMe .List .imganMe{
+	display:inline-block; width:18px; height:18px; overflow:hidden; margin:0px;
+	background-position:50% 50%; background-repeat:no-repeat;
+}
+.DownloadMe .List .operate{text-align:center; width:90px;}
+.DownloadMe .List .operate a{display:;}
+.DownloadMe .List .onsel{background-image:url(../../../../admin/views/images/onsel.gif);}
+.DownloadMe .List .onsels{background-image:url(../../../../admin/views/images/no.png);}
+.DownloadMe .List .weburl{background-image:url(url.gif);}
+.DownloadMe .List .hSize{
+	height:20px; line-height:20px; background:url(size.gif) 100% -72px no-repeat; display:inline-block;
+	padding-right:20px; cursor:pointer;
+}
+.DownloadMe .List .upSize{background:url(size.gif) 100% 2px no-repeat;}
+.DownloadMe .List .show{background-image:url(../../../../admin/views/images/plugin_active.gif);}
+.DownloadMe .List .hide{background-image:url(../../../../admin/views/images/plugin_inactive.gif);}
+.DownloadMe .List .vlog{background-image:url(download.gif); background-position:50% 70%;}
+.DownloadMe .List .global{background-image:url(global.gif); background-position:50% 70%;}
+.DownloadMe .List .dell{background-image:url(../../../../admin/views/images/cancel.png);}
+.DownloadMe .PageMe{width:100%; height:25px; line-height:25px; padding-top:20px; text-align:center;}
+.DownloadMe .PageMe a,.DownloadMe .PageMe span{margin:0 2px; padding:2px 3px; border:1px solid #E7E7E7; background:#FAFAFA;}
+.DownloadMe .PageMe span{border:none; color:#060;}
+.DownloadMe .PageMe .an{float:left;}
+.DownloadMe .PageMe input{height:9pt;}
